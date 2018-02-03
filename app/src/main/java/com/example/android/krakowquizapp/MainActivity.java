@@ -58,28 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
         int score = 0;
 
-        if (isNobelOne) {
+        if (isNobelOne && !isNobelTwo &&isNobelThree) {
             score = score + 1;
-        }
-
-        if (isNobelThree) {
-            score = score + 1;
-        }
-
-        if (isNobelTwo) {
-            score = 0;
-        }
-
-        if (isCitizensOne) {
-            score = score;
         }
 
         if (isCitizensTwo) {
             score = score + 1;
-        }
-
-        if (isCitizensThree) {
-            score = score;
         }
         if(TextUtils.isEmpty(nameOfCastle)){
 
@@ -90,14 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
             score = score + 1;
         }
-        if (isCitizensThree) {
-            score = 0;
-        }
-        if (isRiverOne) {
+        if (isRiverOne && isRiverTwo &&!isRiverThree) {
             score = score  + 1;
-        }
-        if (isRiverTwo) {
-            score = score + 1;
         }
         return score;
     }
@@ -116,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     private void display(int score) {
 
             TextView scoreTextView = (TextView) findViewById(R.id.quiz_score);
-            scoreTextView.setText("Congratulations !" + "\nYou've got: " + score + "/6" + "points!");
+            scoreTextView.setText("Congratulations !" + "\nYou've got: " + score + "/4" + "points!");
         }
 
 
