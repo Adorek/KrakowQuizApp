@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="questions_style">16sp</dimen>
+    <dimen name="questions_padding_bottom">5dp</dimen>
+    <dimen name="questions_padding_top">10dp</dimen>
+    <dimen name="separation_line_margin_top">10dp</dimen>
+
+</resources>

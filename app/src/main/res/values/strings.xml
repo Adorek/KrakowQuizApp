@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Krakow Quiz App</string>
+    <string name="second_question">How many citizens live in Krakow?</string>
+    <string name="third_question">What\'s the name of the castle placed in Krakow ?</string>
+    <string name="first_question">Nobel laureates from Krakow ?</string>
+    <string name="fifth_question">Which rivers flow trough Krakow ?</string>
+    <string name="first_answer_of_first_question">\u2264 500000</string>
+    <string name="second_answer_of_first_question">\u2248 1000000</string>
+    <string name="third_answer_of_first_question">\u2265 1000000</string>
+    <string name="q1a1">Wisława Szymborska</string>
+    <string name="q1a2">Lech Wałęsa</string>
+    <string name="q1a3">Czesław Miłosz</string>
+    <string name="q3a1">Wisła</string>
+    <string name="q3a2">Wilga</string>
+    <string name="q3a3">Dunaj</string>
+    <string name="check_button">Check Answers</string>
+</resources>
