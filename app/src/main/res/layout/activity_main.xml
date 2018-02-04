@@ -1,116 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp"
         tools:context="com.example.android.krakowquizapp.MainActivity">
 
-        <TextView
-            style="@style/question_style"
-            android:text="@string/first_question" />
 
-        <CheckBox
+        <ImageView
+            android:id="@+id/wawel_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/q1a1"
-            android:id="@+id/nobelOne"/>
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:src="@drawable/grizzles" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/q1a2"
-            android:id="@+id/nobelTwo"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/q1a3"
-            android:id="@+id/nobelThree"/>
-
-        <View style="@style/separation_line" />
-
-        <TextView
-            style="@style/question_style"
-            android:text="@string/second_question" />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/citizensOne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/first_answer_of_first_question" />
-
-        <RadioButton
-            android:id="@+id/citizensTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/second_answer_of_first_question" />
-
-        <RadioButton
-            android:id="@+id/citizensThree"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/third_answer_of_first_question" />
-
-        </RadioGroup>
-
-        <View style="@style/separation_line" />
-
-        <TextView
-            style="@style/question_style"
-            android:text="@string/fifth_question" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/q3a1"
-            android:id="@+id/riverOne"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/q3a2"
-            android:id="@+id/riverTwo"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/q3a3"
-            android:id="@+id/riverThree"/>
-
-        <View style="@style/separation_line" />
-
-        <TextView
-            style="@style/question_style"
-            android:text="@string/third_question" />
-
-        <EditText
+        <LinearLayout
+            android:layout_below="@id/wawel_image"
+            android:id="@+id/questions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/wawel"/>
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:context="com.example.android.krakowquizapp.MainActivity">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/check_button"
-            android:onClick="showResult"/>
 
-        <TextView
-            style="@style/question_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your result: "
-            android:id="@+id/quiz_score"/>
+            <TextView
+                style="@style/question_style"
+                android:text="@string/first_question" />
 
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/nobelOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q1a1" />
+
+            <CheckBox
+                android:id="@+id/nobelTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q1a2" />
+
+            <CheckBox
+                android:id="@+id/nobelThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q1a3" />
+
+            <View style="@style/separation_line" />
+
+            <TextView
+                style="@style/question_style"
+                android:text="@string/second_question" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/citizensOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_answer_of_first_question" />
+
+                <RadioButton
+                    android:id="@+id/citizensTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/second_answer_of_first_question" />
+
+                <RadioButton
+                    android:id="@+id/citizensThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/third_answer_of_first_question" />
+
+            </RadioGroup>
+
+            <View style="@style/separation_line" />
+
+            <TextView
+                style="@style/question_style"
+                android:text="@string/fifth_question" />
+
+            <CheckBox
+                android:id="@+id/riverOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3a1" />
+
+            <CheckBox
+                android:id="@+id/riverTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3a2" />
+
+            <CheckBox
+                android:id="@+id/riverThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3a3" />
+
+            <View style="@style/separation_line" />
+
+            <TextView
+                style="@style/question_style"
+                android:text="@string/third_question" />
+
+            <EditText
+                android:id="@+id/wawel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showResult"
+                android:text="@string/check_button" />
+
+            <TextView
+                android:id="@+id/quiz_score"
+                style="@style/question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your result: " />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </ScrollView>
+
