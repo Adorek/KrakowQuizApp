@@ -14,4 +14,5 @@
     <string name="q3a2">Wilga</string>
     <string name="q3a3">Dunaj</string>
     <string name="check_button">Check Answers</string>
+    <string name="toast_message">You did not enter an answer</string>
 </resources>

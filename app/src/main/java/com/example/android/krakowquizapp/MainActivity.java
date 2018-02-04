@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(TextUtils.isEmpty(nameOfCastle)){
 
-            Toast.makeText(this, "You did not enter an answer", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "@string/toast_message", Toast.LENGTH_SHORT).show();
             score = score;
         }
         if (nameOfCastle.matches("wawel")) {
