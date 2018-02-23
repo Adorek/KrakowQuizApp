@@ -14,11 +14,28 @@ public class MainActivity extends AppCompatActivity {
 
     int score = 0;
     String nameOfCastle;
+    private CheckBox nobelOne;
+    private CheckBox nobelTwo;
+    private CheckBox nobelThree;
+    private CheckBox riverOne;
+    private CheckBox riverTwo;
+    private CheckBox riverThree;
+    private RadioButton citizensTwo;
+    private EditText wawelCastle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nobelOne = findViewById(R.id.nobelOne);
+        nobelTwo = findViewById(R.id.nobelTwo);
+        nobelThree = findViewById(R.id.nobelThree);
+        riverOne = findViewById(R.id.riverOne);
+        riverTwo = findViewById(R.id.riverTwo);
+        riverThree = findViewById(R.id.riverThree);
+        citizensTwo = findViewById(R.id.citizensTwo);
+        wawelCastle = findViewById(R.id.wawel);
     }
 
     /**
@@ -26,34 +43,13 @@ public class MainActivity extends AppCompatActivity {
      */
     private int countScore() {
 
-        CheckBox  nobelOne = (CheckBox) findViewById(R.id.nobelOne);
         boolean isNobelOne = nobelOne.isChecked();
-
-        CheckBox  nobelTwo = (CheckBox) findViewById(R.id.nobelTwo);
         boolean isNobelTwo = nobelTwo.isChecked();
-
-        CheckBox  nobelThree = (CheckBox) findViewById(R.id.nobelThree);
         boolean isNobelThree = nobelThree.isChecked();
-
-        CheckBox  riverOne = (CheckBox) findViewById(R.id.riverOne);
         boolean isRiverOne = riverOne.isChecked();
-
-        CheckBox  riverTwo = (CheckBox) findViewById(R.id.riverTwo);
         boolean isRiverTwo = riverTwo.isChecked();
-
-        CheckBox  riverThree = (CheckBox) findViewById(R.id.riverThree);
         boolean isRiverThree = riverThree.isChecked();
-
-        RadioButton citizensOne = (RadioButton) findViewById(R.id.citizensOne);
-        boolean isCitizensOne = citizensOne.isChecked();
-
-        RadioButton citizensTwo = (RadioButton) findViewById(R.id.citizensTwo);
         boolean isCitizensTwo = citizensTwo.isChecked();
-
-        RadioButton citizensThree = (RadioButton) findViewById(R.id.citizensThree);
-        boolean isCitizensThree = citizensThree.isChecked();
-
-        EditText wawelCastle = (EditText) findViewById(R.id.wawel);
         nameOfCastle = wawelCastle.getText().toString().toLowerCase();
 
         int score = 0;
@@ -61,14 +57,8 @@ public class MainActivity extends AppCompatActivity {
         if (isNobelOne && !isNobelTwo &&isNobelThree) {
             score = score + 1;
         }
-
         if (isCitizensTwo) {
             score = score + 1;
-        }
-        if(TextUtils.isEmpty(nameOfCastle)){
-
-            Toast.makeText(this, getString(R.string.toast_message), Toast.LENGTH_SHORT).show();
-            score = score;
         }
         if (nameOfCastle.matches("wawel")) {
 
@@ -77,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         if (isRiverOne && isRiverTwo &&!isRiverThree) {
             score = score  + 1;
         }
+
         return score;
     }
 
@@ -89,13 +80,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the score of the quiz.
+     * This method checks if EditText is not empty and displays the results of the quiz.
      */
     private void display(int score) {
 
-            TextView scoreTextView = (TextView) findViewById(R.id.quiz_score);
-            scoreTextView.setText("Congratulations !" + "\nYou've got: " + score + "/4" + "points!");
+        if(TextUtils.isEmpty(nameOfCastle)){
+
+            Toast.makeText(this, getString(R.string.toast_message), Toast.LENGTH_SHORT).show();
+
         }
 
+        else
+
+        Toast.makeText(this, "Congratulations !" + "\nYou've got: " + score + "/4" + "points!", Toast.LENGTH_SHORT).show();
+    }
 
 }

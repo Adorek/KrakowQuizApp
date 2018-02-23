@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:context="com.example.android.krakowquizapp.MainActivity">
-
 
         <ImageView
             android:id="@+id/wawel_image"
@@ -19,18 +15,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:adjustViewBounds="true"
-            android:src="@drawable/grizzles" />
+            android:src="@drawable/castle_wawel" />
 
         <LinearLayout
-            android:layout_below="@id/wawel_image"
             android:id="@+id/questions"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_below="@id/wawel_image"
             android:orientation="vertical"
             android:padding="20dp"
             tools:context="com.example.android.krakowquizapp.MainActivity">
-
 
             <TextView
                 style="@style/question_style"
@@ -68,19 +63,19 @@
                     android:id="@+id/citizensOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/first_answer_of_first_question" />
+                    android:text="@string/q2a1" />
 
                 <RadioButton
                     android:id="@+id/citizensTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/second_answer_of_first_question" />
+                    android:text="@string/q2a2" />
 
                 <RadioButton
                     android:id="@+id/citizensThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/third_answer_of_first_question" />
+                    android:text="@string/q2a3" />
 
             </RadioGroup>
 
@@ -88,7 +83,7 @@
 
             <TextView
                 style="@style/question_style"
-                android:text="@string/fifth_question" />
+                android:text="@string/fourth_question" />
 
             <CheckBox
                 android:id="@+id/riverOne"
@@ -117,20 +112,15 @@
             <EditText
                 android:id="@+id/wawel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapSentences" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:onClick="showResult"
                 android:text="@string/check_button" />
-
-            <TextView
-                android:id="@+id/quiz_score"
-                style="@style/question_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Your result: " />
 
         </LinearLayout>
 
